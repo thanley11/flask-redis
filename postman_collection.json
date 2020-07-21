@@ -1,0 +1,193 @@
+{
+	"info": {
+		"name": "flask-redis",
+		"_postman_id": "cace861f-ed84-48ce-a699-5b71b3488ef2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET sample",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "0.0.0.0:5000/sample-household",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"sample-household"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET household fpl",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "0.0.0.0:5000/household/{{testId}}/fpl-percent",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"household",
+						"{{testId}}",
+						"fpl-percent"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET household",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "0.0.0.0:5000/household/{{testId}}",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"household",
+						"{{testId}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST household Large",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{largeHousehold}}"
+				},
+				"url": {
+					"raw": "0.0.0.0:5000/household/",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"household",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST household Normal",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b8a6b756-09df-4811-9b96-95a57d2f9d00",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{household}}"
+				},
+				"url": {
+					"raw": "0.0.0.0:5000/household/",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"household",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST household Bad Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{badHousehold}}"
+				},
+				"url": {
+					"raw": "0.0.0.0:5000/household/",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"household",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
